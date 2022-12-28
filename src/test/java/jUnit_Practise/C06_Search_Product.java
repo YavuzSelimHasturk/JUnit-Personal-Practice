@@ -80,10 +80,10 @@ public class C06_Search_Product {
         Assert.assertTrue(product1.getText().contains(expectedName));
 
         WebElement product2 = driver.findElement(By.xpath("(//p[text()='Regular Fit Straight Jeans'])[1]"));
-        Assert.assertTrue(product1.getText().contains(expectedName));
+        Assert.assertTrue(product2.getText().contains(expectedName));
 
         WebElement product3 = driver.findElement(By.xpath("(//p[text()='Grunt Blue Slim Fit Jeans'])[1]"));
-        Assert.assertTrue(product1.getText().contains(expectedName));
+        Assert.assertTrue(product3.getText().contains(expectedName));
 
 
     }

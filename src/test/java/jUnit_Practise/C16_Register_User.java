@@ -25,13 +25,13 @@ public class C16_Register_User extends TestBase {
         Assert.assertEquals(expectedTitle,actualTitle);
 
         ReusableMethods.bekle(5);
-        //5. Click on 'Signup / Login' button
+        //3. Click on 'Signup / Login' button
         driver.findElement(By.xpath("//a[text()=' Signup / Login']")).click();
 
-        //5. Verify 'New User Signup!' is visible
+        //4. Verify 'New User Signup!' is visible
         WebElement newUserSignUpElementi= driver.findElement(By.xpath("//h2[text()='New User Signup!']"));
 
-        //6. Enter name and email address
+        //5. Enter name and email address
         WebElement nameArea = driver.findElement(By.xpath("//input[@name='name']"));
         Actions actions = new Actions(driver);
         Faker faker = new Faker();
@@ -42,16 +42,15 @@ public class C16_Register_User extends TestBase {
 
         ReusableMethods.bekle(3);
 
-        //7. Click 'Signup' button
-        // actions.click(driver.findElement(By.xpath("//button[text()='Signup']")));
+        //6. Click 'Signup' button
         driver.findElement(By.xpath("//button[text()='Signup']")).click();
 
         ReusableMethods.bekle(3);
-        //8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
+        //7. Verify that 'ENTER ACCOUNT INFORMATION' is visible
         WebElement information = driver.findElement(By.xpath("(//h2[@class='title text-center'])[1]"));
         Assert.assertTrue(information.isDisplayed());
 
-        //9. Fill details: Title, Name, Email, Password, Date of birth
+        //8. Fill details: Title, Name, Email, Password, Date of birth
         WebElement gender = driver.findElement(By.xpath("//input[@id='id_gender1']"));
         actions.click(gender)
                 .sendKeys(Keys.TAB)
@@ -68,16 +67,15 @@ public class C16_Register_User extends TestBase {
 
         ReusableMethods.bekle(3);
 
-        //10. Select checkbox 'Sign up for our newsletter!'
-      //  WebElement checkbox = driver.findElement(By.xpath("//input[@name='newsletter']"));
+        //9. Select checkbox 'Sign up for our newsletter!'
         actions.click(driver.findElement(By.xpath("//input[@name='newsletter']")));
 
-        //11. Select checkbox 'Receive special offers from our partners!'
+        //10. Select checkbox 'Receive special offers from our partners!'
         actions.click(driver.findElement(By.xpath("//input[@name='optin']")));
 
         ReusableMethods.bekle(3);
 
-        //12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
+        //11. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
         actions.click(driver.findElement(By.xpath("//input[@id='first_name']")))
                 .sendKeys(faker.name().firstName())
                 .sendKeys(Keys.TAB)
@@ -100,28 +98,28 @@ public class C16_Register_User extends TestBase {
 
         ReusableMethods.bekle(3);
 
-        //13. Click 'Create Account button'
+        //12. Click 'Create Account button'
         driver.findElement(By.xpath("(//button[@type='submit'])[1]")).click();
 
         ReusableMethods.bekle(3);
 
-        //14. Verify that 'ACCOUNT CREATED!' is visible
+        //13. Verify that 'ACCOUNT CREATED!' is visible
         Assert.assertTrue(driver.findElement(By.xpath("//h2[@class='title text-center']")).isDisplayed());
 
-        //15. Click 'Continue' button
+        //14. Click 'Continue' button
         driver.findElement(By.xpath("//a[text()='Continue']")).click();
 
         ReusableMethods.bekle(3);
 
-        //16. Verify that 'Logged in as username' is visible
+        //15. Verify that 'Logged in as username' is visible
         Assert.assertTrue(driver.findElement(By.xpath("//*[text()=' Logged in as ']")).isDisplayed());
 
-        //17. Click 'Delete Account' button
+        //16. Click 'Delete Account' button
         driver.findElement(By.xpath("//a[text()=' Delete Account']")).click();
 
         ReusableMethods.bekle(3);
 
-        //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
+        //17. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
         Assert.assertTrue(driver.findElement(By.xpath("//h2[@data-qa='account-deleted']")).isDisplayed());
     }
 }

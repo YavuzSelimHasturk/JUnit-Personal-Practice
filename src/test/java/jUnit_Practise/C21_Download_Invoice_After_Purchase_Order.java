@@ -7,14 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.Duration;
+
 
 public class C21_Download_Invoice_After_Purchase_Order extends TestBase {
     @Test

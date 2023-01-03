@@ -75,6 +75,7 @@ public class C22_kiwiTest extends TestBase {
         driver.findElement(By.xpath("//*[text()='Aktarmasız (direkt)']")).click();
         driver.findElement(By.xpath("//*[text()='En ucuz']")).click();
         ReusableMethods.bekle(3);
+
         // Filtreleme yaptigimiz ve en ucuz ucusun fiyatlarini getirerek 5000 TL den kucuk oldugunu dogrulayalim
         WebElement ucusFiyati = driver.findElement(By.xpath("(//*[@class=' length-8'])[4]"));
         String fiyat = ucusFiyati.getText();

@@ -56,19 +56,24 @@ public class C11_Contact_Us_Form {
         message.sendKeys("Hello World!");
 
         Thread.sleep(4000);
+    //6. Upload File
+        WebElement uploadFile = driver.findElement(By.xpath("//input[@type='file']"));
+        String dosyaYolu = System.getProperty("user.home")+"\\Desktop\\image.png";
+        uploadFile.sendKeys(dosyaYolu);
 
-    //6. Click 'Submit' button
+
+    //7. Click 'Submit' button
         WebElement submit = driver.findElement(By.xpath("//input[@name='submit']"));
         submit.click();
 
-    //7. Click OK button
+    //8. Click OK button
         driver.switchTo().alert().accept();
 
-    //8. Verify success message 'Success! Your details have been submitted successfully.' is visible
+    //9. Verify success message 'Success! Your details have been submitted successfully.' is visible
         WebElement successMessage = driver.findElement(By.xpath("(//div[text()='Success! Your details have been submitted successfully.'])[1]"));
         Assert.assertTrue(successMessage.isDisplayed());
 
-    //9. Click 'Home' button and verify that landed to home page successfully
+    //10. Click 'Home' button and verify that landed to home page successfully
         driver.findElement(By.xpath("//span[text()=' Home']")).click();
         Assert.assertEquals(actualTitle,expectedWord);
         Thread.sleep(5000);

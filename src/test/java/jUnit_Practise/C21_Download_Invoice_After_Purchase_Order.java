@@ -141,6 +141,7 @@ public class C21_Download_Invoice_After_Purchase_Order extends TestBase {
 
         //15. Click 'Pay and Confirm Order' button
          actions.click(driver.findElement(By.xpath("//button[@id='submit']"))).perform();
+
         //16. Verify success message 'Congratulations! Your order has been confirmed!'
         Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Congratulations! Your order has been confirmed!']")).isDisplayed());
 

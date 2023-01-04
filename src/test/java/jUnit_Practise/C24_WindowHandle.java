@@ -15,16 +15,16 @@ public class C24_WindowHandle extends TestBase {
 
     @Test
     public void test01() {
-        Actions actions = new Actions(driver);
+
         //1."http://webdriveruniversity.com/" adresine gidin
         driver.get("http://webdriveruniversity.com/");
 
         //2."Login Portal" a kadar asagi inin
-
+        Actions actions = new Actions(driver);
         WebElement loginPortalElementi = driver.findElement(By.xpath("//*[text()='LOGIN PORTAL']"));
         actions.scrollToElement(loginPortalElementi);
 
-        ReusableMethods.bekle(5);
+        ReusableMethods.bekle(7);
 
         //3."Login Portal" a tiklayin
         String homePageWHD = driver.getWindowHandle();
@@ -44,7 +44,10 @@ public class C24_WindowHandle extends TestBase {
         WebElement username= driver.findElement(By.xpath("//input[@id='text']"));
 
         actions = new Actions(driver);
-        actions.click(username).sendKeys("yvz").sendKeys(Keys.TAB).sendKeys("123").perform();
+        actions.click(username)
+               .sendKeys("yvz")
+               .sendKeys(Keys.TAB)
+               .sendKeys("123").perform();
 
         ReusableMethods.bekle(5);
 
@@ -53,7 +56,9 @@ public class C24_WindowHandle extends TestBase {
         loginElementi.click();
 
         //7.Popup'ta cikan yazinin "validation failed" oldugunu test edin
-        System.out.println("Popup yazisi : "+driver.switchTo().alert().getText());
+        String expectedAlertText="validation failed";
+        String actualAlertText=driver.switchTo().alert().getText();
+        Assert.assertEquals(actualAlertText, expectedAlertText);
 
         //8.Ok diyerek Popup'i kapatin
         driver.switchTo().alert().accept();

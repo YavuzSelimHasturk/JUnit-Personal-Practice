@@ -1,4 +1,4 @@
-package jUnit_Practise;
+package jUnit_Practise_1;
 
 import org.junit.Assert;
 import org.junit.Test;

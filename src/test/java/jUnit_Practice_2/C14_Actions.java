@@ -1,4 +1,4 @@
-package jUnit_Practise;
+package jUnit_Practice_2;
 
 import org.junit.Test;
 import org.junit.internal.RealSystem;

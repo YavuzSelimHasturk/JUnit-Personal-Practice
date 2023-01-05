@@ -1,4 +1,4 @@
-package jUnit_Practise;
+package jUnit_Practice_2;
 
 import com.github.javafaker.Faker;
 import org.junit.Assert;

@@ -1,4 +1,4 @@
-package jUnit_Practise;
+package jUnit_Practise_1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
@@ -10,10 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.sql.Array;
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
 
 public class C09_Remove_Products {
     //  Test Case : Remove Products From Cart

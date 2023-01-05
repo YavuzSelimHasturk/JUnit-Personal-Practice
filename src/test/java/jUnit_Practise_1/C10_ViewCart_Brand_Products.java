@@ -1,4 +1,4 @@
-package jUnit_Practise;
+package jUnit_Practise_1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
@@ -10,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.sql.DriverManager;
 import java.time.Duration;
 
 public class C10_ViewCart_Brand_Products {

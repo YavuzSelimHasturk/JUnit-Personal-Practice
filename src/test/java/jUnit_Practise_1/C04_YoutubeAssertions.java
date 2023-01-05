@@ -1,4 +1,4 @@
-package jUnit_Practise;
+package jUnit_Practise_1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;

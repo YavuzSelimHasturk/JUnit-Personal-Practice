@@ -61,6 +61,7 @@ public class C11_Contact_Us_Form {
         String dosyaYolu = System.getProperty("user.home")+"\\Desktop\\image.png";
         uploadFile.sendKeys(dosyaYolu);
 
+        Thread.sleep(4000);
 
     //7. Click 'Submit' button
         WebElement submit = driver.findElement(By.xpath("//input[@name='submit']"));
